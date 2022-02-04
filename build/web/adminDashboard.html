@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Admin Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="adminDashboard.css" rel="stylesheet">
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main container">
+            <div class="admin_dashboard row">
+                <div class="admin_sidebar col">
+                    <h4 class="admin_title">Admin <i class="ri-admin-fill"></i> Dashboard</h4>
+                    <hr class="admin_sidebar_line">
+                    <ul class ="admin_sidebar_links">
+                        <li><a href="#" class="admin_sidebar_link">User List</a></li>
+                        <li><button type="button" class="admin_sidebar_link" id="addUserBtn">Add user</button></li>
+                        <li><a href="#" class="admin_sidebar_link">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="admin_main_content col-10"> 
+                    <h4>Table List of user</h4>
+                    <div class="admin_user_table ">
+                        <div class="admin_table_nav">
+                            <div>
+                                <button type="button" class="patientBtn admin_navBtn admin_navBtn_active">Patient</button>
+                                <button type="button" class="doctorBtn admin_navBtn">Doctor</button>
+                                <button type="button" class="adminBtn admin_navBtn">Admin</button>
+
+                            </div>
+                        </div>
+                        <hr class="admin_line">
+                        <!--patient table-->
+                        <div class="user_table tableActive">
+                            <table class = "table table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">User Id</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Contact No</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--javascript retrieving all the data from database-->
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>
+                                            <button type="button" class="btn btn-warning editUserBtn editPatient">Edit</button>
+                                            <button type="button" class="btn btn-danger deleteUserBtn">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--doctor table-->
+                        <div class="user_table">
+                            <table class = "table table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">User Id</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Contact No</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--javascript retrieving all the data from database-->
+                                     <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>
+                                            <button type="button" class="btn btn-warning editUserBtn editDoctor">Edit</button>
+                                            <button type="button" class="btn btn-danger deleteUserBtn">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--admin table-->
+                        <div class="user_table">
+                            <table class = "table table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">User Id</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Contact No</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--javascript retrieving all the data from database-->
+                                     <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>
+                                            <button type="button" class="btn btn-warning editUserBtn editAdmin">Edit</button>
+                                            <button type="button" class="btn btn-danger deleteUserBtn">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--add user page-->
+                <div class="add_user_page">
+                    <div class="add_user_page-content">
+                        <h4 class="add_user_page-title">User Form</h4>
+                        <h4 class="add_user_page-title">Update User</h4>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="userId">User Id</label>
+                                    <input type="email" class="form-control" id="userId" name="userId" placeholder="Your unique ID">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Full name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Your password..">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact</label>
+                                <input type="text" class="form-control" id="contact" name="contact" placeholder="012-3456789">
+                            </div>
+                            <div class="d-flex justify-content-around pt-2 pb-2">
+                                <div class="form-check radioBtn">
+                                    <input class="form-check-input admin" type="radio" name="role" id="admin" value="ADMIN" checked>
+                                    <label class="form-check-label" for="admin">
+                                        Admin
+                                    </label>
+                                </div>
+                                <div class="form-check radioBtn">
+                                    <input class="form-check-input patient" type="radio" name="role" id="patient" value="PATIENT">
+                                    <label class="form-check-label" for="patient">
+                                        Patient
+                                    </label>
+                                </div>
+                                <div class="form-check radioBtn">
+                                    <input class="form-check-input doctor" type="radio" name="role" id="doctor" value="DOCTOR">
+                                    <label class="form-check-label" for="doctor">
+                                        Doctor
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="extraForm form-group">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control " id="address" name="address" placeholder="Current location">
+                                </div>
+                                <div class="form-group">
+                                    <label for="emergencyContact">Emergency Contact</label>
+                                    <input type="text" class="form-control" id="emergencyContact" name="emergencyContact" placeholder="012-3456789">
+                                </div>
+                            </div>
+                            <div class="extraForm form-group">
+                                <div class="form-group">
+                                    <label for="hospital">Hospital</label>
+                                    <input type="text" class="form-control" id="hospital" name="hospital" placeholder="Current Hospital">
+                                </div>
+                                <div class="form-group">
+                                    <label for="doctorPosition">Position</label>
+                                    <input type="text" class="form-control" id="doctorPosition" name="doctorPosition" placeholder="Medical officer">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="add_user_page-buttons">
+                            <button type="button" class="btn btn-primary confirmBtn" id="confirmAddUserBtn" >Confirm</button>
+                            <button type="button" class ="btn btn-secondary" id="cancelBtnAddUser">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--delete user confirmation page-->
+                <div class="confirmation_deleteUser_page">
+                    <div class="confirmation_deleteUser_page-content">
+                        <div>
+                            <h4 class="confirmation_deleteUser_page-title">Confirm delete user?</h4>
+                            <p class="confirmation_deleteUser_page-subtitle">All data will be saved. Any change <br> request made after this will need <br>to update it manually</p>
+                        </div>
+                        <div class class ="btn btn-primary confirmBtn" id="confirmDeleteUserBtn" >Confirm</button>
+                            <button type="button" class ="btn btn-secondary" id="cancelDeleteUserBtn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="adminDashboard.js"></script>
+    </body>
+</html>
