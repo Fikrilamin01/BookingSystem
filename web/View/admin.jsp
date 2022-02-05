@@ -11,7 +11,7 @@
         <%@include file = "head.jsp"%>
     </head>
     <body>
-        <%@include file = "navigation.jsp"%>
+        <%@include file = "adminNav.jsp"%>
         <div class="container loginContainer d-flex justify-content-between pd-12">
         <div class="indexContent">
         <div>

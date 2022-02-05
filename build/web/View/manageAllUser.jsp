@@ -40,7 +40,7 @@
         
     </head>
     <body>
-        <%@include file = "navigation.jsp"%>       
+        <%@include file = "adminNav.jsp"%>       
         <div class="container">
             <div class="manageUserTitle"><br><br>Manage User Profile</div>
             <div class="row justify-content">

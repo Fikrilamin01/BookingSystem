@@ -40,7 +40,7 @@
         
     </head>
     <body>
-        <%@include file = "navigation.jsp"%>       
+        <%@include file = "adminNav.jsp"%>       
         <div class="container">
             <div class="manageBookingTitle"><br><br>Manage Booking Hall</div>
             <div class="row justify-content">
