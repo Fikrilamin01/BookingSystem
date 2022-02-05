@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import DAO.CustomerDAOImpl;
+import DAO.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -20,26 +23,38 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "MakeBooking", urlPatterns = {"/MakeBooking"})
 public class MakeBooking extends HttpServlet {
 
-    
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
     }
 
     
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try(PrintWriter out = response.getWriter()){
+        UserDAO customerDAO = new CustomerDAOImpl();
+        HttpSession session = request.getSession();
+        String Activity= request.getParameter("activity");
+        
+        if(Activity.equals("pingpong"))
+        {
+            out.println("Ping-Pong Receive");
+        }
+        else if(Activity.equals("Basketball"))
+        {
+            
+        }
+        else
+        {
+            
+        }
+        
+        
+        
     }
-
+    }
    
 
 }

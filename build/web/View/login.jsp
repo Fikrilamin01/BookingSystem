@@ -34,6 +34,12 @@
                             <span class="text-danger"><%=request.getAttribute("logout")%></span>
                             <%
                                 }
+
+                                if (request.getAttribute("failedRegister") != null) {
+                            %>
+                            <span class="text-danger"><%=request.getAttribute("failedRegister")%></span>
+                            <%
+                                }
                             %>
 
                             <div class="login__box">
