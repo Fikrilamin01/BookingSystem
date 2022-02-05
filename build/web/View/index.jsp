@@ -4,6 +4,9 @@
     Author     : fikri
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="DAO.UserDAOImpl"%>
+<%@page import="DAO.UserDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +17,7 @@
         <%@include file = "navigation.jsp"%>
         <div class="container indexContainer d-flex justify-content-between pd-12">
             <div class="indexImage">
-                <img src="<%= request.getContextPath() %>/images/Main image 3.png" 
+                <img src="<%= request.getContextPath()%>/images/Main image 3.png" 
                      width="450"/>
             </div>
             <div class="indexContent">
@@ -32,7 +35,7 @@
                         </p>
                     </div>
                     <div>
-                        <a href="<%= request.getContextPath() %>/Login" class="indexBtn">Book now</a>
+                        <a href="<%= request.getContextPath()%>/Login" class="indexBtn">Book now</a>
                     </div>
                 </div>
             </div>
