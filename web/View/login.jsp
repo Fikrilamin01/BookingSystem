@@ -64,6 +64,13 @@
 
                         <form action="Register" class="login__create none" id="login-up" method="post">
                             <h1 class="login__title">Create Account</h1>
+                            <%
+                                if (request.getAttribute("failedRegister") != null) {
+                            %>
+                            <span class="text-danger"><%=request.getAttribute("failedRegister")%></span>
+                            <%
+                                }
+                            %>
                             <div class="login__box">
                                 <i class='bx bx-user login__icon'></i>
                                 <input type="text" placeholder="Username" name="username" class="login__input">
