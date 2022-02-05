@@ -50,7 +50,7 @@
                           <div class="container">
                           <table class="table table-hover">
                               <thead class="table-condensed">
-                                <tr style="border:4px solid cadetblue">
+                                <tr>
                                   <td style="padding:20px 20px 20px 10px;">Username</td>
                                   <td style="padding:20px 20px 20px 10px;">Name</td>
                                   <td style="padding:20px 20px 20px 10px;">Email</td>
@@ -68,7 +68,7 @@
                                         else{
                                    %>
                               <tbody>
-                                    <tr style="border:3px solid cadetblue">
+                                    <tr>
                                         <td style="padding:10px;"><%=ul.get(i).getUserName()%></td>
                                         <td style="padding:10px;"><%=ul.get(i).getName()%></td>
                                         <td style="padding:10px;"><%=ul.get(i).getEmail()%></td>
