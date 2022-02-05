@@ -4,7 +4,7 @@
     Author     : fikri
 --%>
 <head>
-    <link href="<%= request.getContextPath() %>/css/pricing.css" rel="stylesheet">
+    <link href="<%= request.getContextPath()%>/css/pricing.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 </head>
@@ -22,7 +22,6 @@
 
             <header class="card__header">
                 <div class="card__header-circle grid">
-                    <!--                    <img src="images/ping pong.png" alt="" class="card__header-img">-->
                     <i class="fas fa-table-tennis card__header-icon fa-2x"></i>
                 </div>
 
@@ -49,7 +48,16 @@
                 </li>
             </ul>
 
-            <button class="card__button">Choose this plan</button>
+            <% //if the user is not login yet, redirect them to login page
+
+                if (session.getAttribute("customer") == null) {
+            %>
+            <a href="<%= request.getContextPath()%>/Login" class="pricing__button">Book this session</a>
+            <%
+            } else {
+            %>
+            <a href="<%= request.getContextPath()%>/Booking?activity=pingpong" class="pricing__button">Book this session</a>
+            <%}%>
         </article>
 
         <!--==================== CARD 2 ====================-->
@@ -64,7 +72,7 @@
             <header class="card__header">
                 <div class="card__header-circle grid">
                     <i class="fas fa-basketball-ball card__header-icon fa-2x"></i>
-<!--                    <img src="assets/img/pro-coin.png" alt="" class="card__header-img">-->
+                    <!--                    <img src="assets/img/pro-coin.png" alt="" class="card__header-img">-->
                 </div>
 
                 <span class="card__header-subtitle">Most popular</span>
@@ -82,15 +90,23 @@
                 </li>
                 <li class="card__list-item">
                     <i class="uil uil-check card__list-icon"></i>
-                    <p class="card__list-description">National Basketball Association (NBA) Court Size</p>
+                    <p class="card__list-description">(NBA) Court Size</p>
                 </li>
                 <li class="card__list-item">
                     <i class="uil uil-check card__list-icon"></i>
                     <p class="card__list-description">Free 2  100Plus bottle/session</p>
                 </li>
             </ul>
+            <% //if the user is not login yet, redirect them to login page
 
-            <button class="card__button">Choose this plan</button>
+                if (session.getAttribute("customer") == null) {
+            %>
+            <a href="<%= request.getContextPath()%>/Login" class="pricing__button">Book this session</a>
+            <%
+            } else {
+            %>
+            <a href="<%= request.getContextPath()%>/Booking?activity=basketball" class="pricing__button">Book this session</a>
+            <%}%>
         </article>
 
         <!--==================== CARD 3 ====================-->
@@ -105,7 +121,7 @@
             <header class="card__header">
                 <div class="card__header-circle grid">
                     <i class="fas fa-dumbbell card__header-icon fa-2x"></i>
-<!--                    <img src="assets/img/enterprise-coin.png" alt="" class="card__header-img">-->
+                    <!--                    <img src="assets/img/enterprise-coin.png" alt="" class="card__header-img">-->
                 </div>
 
                 <span class="card__header-subtitle">Recommended</span>
@@ -131,7 +147,17 @@
                 </li>
             </ul>
 
-            <button class="card__button">Choose this plan</button>
+
+            <% //if the user is not login yet, redirect them to login page
+
+                if (session.getAttribute("customer") == null) {
+            %>
+            <a href="<%= request.getContextPath()%>/Login" class="pricing__button">Book this session</a>
+            <%
+            } else {
+            %>
+            <a href="<%= request.getContextPath()%>/Booking?activity=gymnasium" class="pricing__button">Book this session</a>
+            <%}%>
         </article>
     </div>
 </section>

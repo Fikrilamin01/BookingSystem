@@ -13,3 +13,4 @@
 <!--=============== BOXICONS ===============-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 <link href= "<%= request.getContextPath() %>/css/main.css"  rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>

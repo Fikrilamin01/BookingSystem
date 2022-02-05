@@ -34,6 +34,12 @@
                             <span class="text-danger"><%=request.getAttribute("logout")%></span>
                             <%
                                 }
+
+                                if (request.getAttribute("failedRegister") != null) {
+                            %>
+                            <span class="text-danger"><%=request.getAttribute("failedRegister")%></span>
+                            <%
+                                }
                             %>
 
                             <div class="login__box">
@@ -56,22 +62,46 @@
                             </div>
                         </form>
 
-                        <form action="Register" class="login__create none" id="login-up">
+                        <form action="Register" class="login__create none" id="login-up" method="post">
                             <h1 class="login__title">Create Account</h1>
-
+                            <%
+                                if (request.getAttribute("failedRegister") != null) {
+                            %>
+                            <span class="text-danger"><%=request.getAttribute("failedRegister")%></span>
+                            <%
+                                }
+                            %>
                             <div class="login__box">
                                 <i class='bx bx-user login__icon'></i>
-                                <input type="text" placeholder="Username" class="login__input">
+                                <input type="text" placeholder="Username" name="username" class="login__input">
                             </div>
 
                             <div class="login__box">
                                 <i class='bx bx-at login__icon'></i>
-                                <input type="text" placeholder="Email" class="login__input">
-                            </div>
+                                <%
+                                    if (request.getAttribute("failedRegister") != null) {
+                                        out.println("<input type='email' placeholder='Email'"
+                                                + "name='email' value='" + request.getAttribute("email") + "'>");
+                                    } else {
+                                %>
+                                <input type="email" placeholder="Email" name="email" class="login__input">
 
+                                <%
+                                    }
+                                %>
+                            </div>
                             <div class="login__box">
                                 <i class='bx bx-lock-alt login__icon'></i>
-                                <input type="password" placeholder="Password" class="login__input">
+                                <%
+                                    if (request.getAttribute("failedRegister") != null) {
+                                        out.println("<input type='password' placeholder='Password'"
+                                                + "name='password' value='" + request.getAttribute("password") + "'>");
+                                    } else {
+                                %>
+                                <input type="password" placeholder="Password" name="password" class="login__input">
+                                <%
+                                    }
+                                %>
                             </div>
 
                             <button class="login__button">Sign Up</button>

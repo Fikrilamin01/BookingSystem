@@ -30,3 +30,11 @@ signIn.addEventListener('click', ()=>{
     loginIn.classList.toggle('block')
     loginUp.classList.toggle('none')
 })
+
+//registration form
+$(function(){
+	$('.form-holder').delegate("input", "focus", function(){
+		$('.form-holder').removeClass("active");
+		$(this).parent().addClass("active");
+	})
+})
