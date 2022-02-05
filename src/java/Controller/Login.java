@@ -85,7 +85,7 @@ public class Login extends HttpServlet {
                     //add to session
                     session.setAttribute("user", user);
                     //redirect to profile page
-                    response.sendRedirect("");
+                    response.sendRedirect("Admin");
                     return;
                 } else {
                     //Customer will redirect to their profile page
