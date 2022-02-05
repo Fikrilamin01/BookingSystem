@@ -26,6 +26,30 @@ public class MakeBooking extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+           try(PrintWriter out = response.getWriter()){
+        UserDAO customerDAO = new CustomerDAOImpl();
+        HttpSession session = request.getSession();
+        String Activity= request.getParameter("activity");
+      
+        
+        if(Activity.equals("pingpong"))
+        {
+            request.setAttribute("activity", Activity);
+            request.getRequestDispatcher("View/BookingPagePingPong.jsp").forward(request, response);
+        }
+        else if(Activity.equals("basketball"))
+        {
+            request.setAttribute("activity", Activity);
+            request.getRequestDispatcher("View/BookingPageBasketball.jsp").forward(request, response);
+        }
+        else 
+        {
+            request.setAttribute("activity", Activity);
+            request.getRequestDispatcher("View/BookingPageGymnasium.jsp").forward(request, response);
+        }
+        
+        
+    }
         
     }
 
@@ -37,10 +61,11 @@ public class MakeBooking extends HttpServlet {
         UserDAO customerDAO = new CustomerDAOImpl();
         HttpSession session = request.getSession();
         String Activity= request.getParameter("activity");
+      
         
         if(Activity.equals("pingpong"))
         {
-            out.println("Ping-Pong Receive");
+//            out.println("Ping-Pong Receive");
         }
         else if(Activity.equals("Basketball"))
         {
@@ -50,8 +75,8 @@ public class MakeBooking extends HttpServlet {
         {
             
         }
-        
-        
+        request.setAttribute("Activity", out);
+        request.getRequestDispatcher("/View/BookingPage.jsp");
         
     }
     }
