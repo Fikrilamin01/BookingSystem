@@ -165,10 +165,16 @@ ul {
 .card__list-icon {
   font-size: 1.5rem;
   color: hsl(210, 96%, 54%);
-  margin-right: 0.5rem;
+  margin-right: 0.5rem; 
 }
 
-.card__button {
+.pricing__button{
+    text-decoration: none;
+    
+}
+
+.card__button,
+.pricing__button{
   padding: 1.25rem;
   border: none;
   font-size: 0.938rem;
@@ -177,9 +183,11 @@ ul {
   color: white;
   cursor: pointer;
   transition: .4s;
+  text-align: center;
 }
 
-.card__button:hover {
+.card__button:hover,
+.pricing__button:hover{
   box-shadow: 0 12px 24px hsla(210, 97%, 54%, 0.2);
 }
 
@@ -200,7 +208,8 @@ ul {
   .card__content {
     grid-template-rows: repeat(2, max-content);
   }
-  .card__button {
+  .card__button,
+  .pricing__button{
     align-self: flex-end;
   }
 }
