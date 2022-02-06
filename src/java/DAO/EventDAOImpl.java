@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import DBUtility.DBConnection;
+import Utility.DBConnection;
 import Model.Event;
 import java.util.List;
 import java.sql.Connection;

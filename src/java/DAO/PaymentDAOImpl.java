@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import DBUtility.DBConnection;
+import Utility.DBConnection;
 import Model.Booking;
 import Model.Payment;
 import java.sql.Connection;

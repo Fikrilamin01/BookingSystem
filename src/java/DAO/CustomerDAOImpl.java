@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import DBUtility.DBConnection;
+import Utility.DBConnection;
 import Model.Customer;
 import Model.User;
 import java.sql.Connection;
@@ -157,4 +157,8 @@ public class CustomerDAOImpl implements UserDAO<Customer> {
         }
     }
 
+     @Override
+    public void adminUpdate(String username, Customer u) {
+    }
+    
 }
