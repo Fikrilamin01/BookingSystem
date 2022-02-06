@@ -11,62 +11,62 @@ import java.io.Serializable;
  * @author M S I
  */
 public class Event implements Serializable{
-    private int Id;
-    private String name;
-    private String description;
-    private String date;
-    private double price;
-    
-    
-    public Event(){}
 
-    public Event(int Id, String name, String description, String date, double price) {
+    private int Id;
+    private String eventName;
+    private String eventDate;
+    private double eventPrice;
+    private String customerId;
+
+    public Event() {
+    }
+
+    public Event(int Id, String eventName, String eventDate, double eventPrice, String customerId) {
         this.Id = Id;
-        this.name = name;
-        this.description = description;
-        this.date = date;
-        this.price = price;
+        this.eventName = eventName;
+        this.eventDate = eventDate;
+        this.eventPrice = eventPrice;
+        this.customerId = customerId;
     }
 
     public int getId() {
         return Id;
     }
 
-    public String getName() {
-        return name;
+    public String getEventName() {
+        return eventName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEventDate() {
+        return eventDate;
     }
 
-    public String getDate() {
-        return date;
+    public double getEventPrice() {
+        return eventPrice;
     }
 
-    public double getPrice() {
-        return price;
+    public String getCustomerId() {
+        return customerId;
     }
 
     public void setId(int Id) {
         this.Id = Id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEventDate(String eventDate) {
+        this.eventDate = eventDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setEventPrice(double eventPrice) {
+        this.eventPrice = eventPrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
-    
     
 }
