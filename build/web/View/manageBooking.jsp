@@ -42,7 +42,7 @@
     <body>
         <%@include file = "adminNav.jsp"%>       
         <div class="container">
-            <div class="manageBookingTitle"><br><br>Manage Booking Hall</div>
+            <div class="manageBookingTitle"><br><br>Manage Booking Hall (Belum Siap)</div>
             <div class="row justify-content">
                 <div class="col-md-12">
                     <div class=" mt-5">  
