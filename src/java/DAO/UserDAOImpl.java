@@ -135,4 +135,23 @@ public class UserDAOImpl implements UserDAO<User> {
         }
     }
 
+     @Override
+    public void adminUpdate(String username, User user) {
+        try {
+            String SQL = "UPDATE USER SET name=?, email=?, role=? WHERE username=?";
+            conn = DBConnection.openConnection();
+
+//            prepare statement
+            ps = conn.prepareStatement(SQL);
+            ps.setString(1, user.getName());
+            ps.setString(2, user.getEmail());
+            ps.setString(3, user.getRole());
+            ps.setString(4, username);
+            ps.executeUpdate();
+            DBConnection.closeConnection();
+
+        } catch (Exception ex) {
+        }
+    }
+    
 }

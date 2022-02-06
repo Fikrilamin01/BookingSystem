@@ -157,4 +157,8 @@ public class CustomerDAOImpl implements UserDAO<Customer> {
         }
     }
 
+     @Override
+    public void adminUpdate(String username, Customer u) {
+    }
+    
 }
