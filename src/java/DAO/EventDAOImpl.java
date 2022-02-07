@@ -36,8 +36,8 @@ public class EventDAOImpl implements DAO<Event> {
             while (rs.next()) {
                 Event u = new Event();
                 u.setId(rs.getInt("id"));
-                u.setEventDate(rs.getString("eventDate"));
                 u.setEventName(rs.getString("eventName"));
+                u.setEventDate(rs.getString("eventDate"));
                 u.setEventPrice(rs.getDouble("eventPrice"));
                 u.setCustomerId(rs.getString("customerId"));
 
@@ -61,8 +61,8 @@ public class EventDAOImpl implements DAO<Event> {
             rs = ps.executeQuery();
             rs.next();
             u.setId(rs.getInt("id"));
-            u.setEventDate(rs.getString("eventDate"));
             u.setEventName(rs.getString("eventName"));
+            u.setEventDate(rs.getString("eventDate"));
             u.setEventPrice(rs.getDouble("eventPrice"));
             u.setCustomerId(rs.getString("customerId"));
             DBConnection.closeConnection();

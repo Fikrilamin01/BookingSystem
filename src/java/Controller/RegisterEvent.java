@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import DAO.EventDAOImpl;
+import Model.Event;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -20,38 +22,56 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet(name = "RegisterEvent", urlPatterns = {"/RegisterEvent"})
 public class RegisterEvent extends HttpServlet {
-    
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String eventName = request.getParameter("event");
-        
-        if (eventName.equals("basic_fitness")) {
-            request.setAttribute("event", eventName);
-            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
-        } else if (eventName.equals("gym_training")) {
-            request.setAttribute("event", eventName);
-            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
-        } else if (eventName.equals("basic_muscle_course")) {
-            request.setAttribute("event", eventName);
-            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
-        } else if (eventName.equals("advanced_muscle_course")) {
-            request.setAttribute("event", eventName);
-            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
-        } else if (eventName.equals("yoga_training")) {
-            request.setAttribute("event", eventName);
-            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
-        } else if (eventName.equals("body_building_course")) {
-            request.setAttribute("event", eventName);
-            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
-        } 
+
+
+        switch (eventName) {
+            case "Basic Fitness":
+                request.setAttribute("event", eventName);
+//                EventDAO.insert(event);
+                break;
+            case "Gym Training":
+                request.setAttribute("event", eventName);
+                break;
+            case "Basic Muscle Course":
+                request.setAttribute("event", eventName);
+                break;
+            case "Advanced Muscle Course":
+                request.setAttribute("event", eventName);
+                break;
+            case "Yoga Training":
+                request.setAttribute("event", eventName);
+                break;
+            case "Body Building Course":
+                request.setAttribute("event", eventName);
+                break;
+            default:
+                break;
+        }
+        request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
     }
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        String eventName = request.getParameter("eventName");
+        String eventDate = request.getParameter("eventDate");
+        String username = request.getParameter("username");
+        double eventPrice = 15.00;
+        
+        HttpSession session = request.getSession();
+        EventDAOImpl EventDAO = new EventDAOImpl();
+        Event event = new Event(1,eventName,eventDate,15.00,username);
+        EventDAO.insert(event);
+        
+        response.sendRedirect("Profile");
+        
     }
-    
+
 }

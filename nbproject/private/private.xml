@@ -4,12 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/src/java/Controller/RegisterEvent.java</file>
-            <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/web/css/main.css</file>
-            <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/src/java/Controller/Register2.java</file>
             <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/src/java/Controller/Register.java</file>
             <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/web/View/registerEvent.jsp</file>
-            <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/src/java/Controller/ViewEvent.java</file>
-            <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/src/java/Controller/Profile.java</file>
+            <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/src/java/Model/Event.java</file>
+            <file>file:/C:/Users/M%20S%20I/Downloads/Booking%20System/BookingSystem/src/java/DAO/EventDAOImpl.java</file>
         </group>
     </open-files>
 </project-private>

@@ -43,7 +43,7 @@
                                     <%
                                     } else {
                                     %>
-                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=basic_fitness" class="text-button">Discover More</a>
+                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=Basic Fitness" class="text-button">Discover More</a>
                                     <%}%>
 
                                 </div>
@@ -62,7 +62,7 @@
                                     <%
                                     } else {
                                     %>
-                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=gym_training" class="text-button">Discover More</a>
+                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=Gym Training" class="text-button">Discover More</a>
                                     <%}%>
                                 </div>
                             </li>
@@ -80,7 +80,7 @@
                                     <%
                                     } else {
                                     %>
-                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=basic_muscle_course" class="text-button">Discover More</a>
+                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=Basic Muscle Course" class="text-button">Discover More</a>
                                     <%}%>
                                 </div>
                             </li>
@@ -102,7 +102,7 @@
                                     <%
                                     } else {
                                     %>
-                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=advanced_muscle_course" class="text-button">Discover More</a>
+                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=Advanced Muscle Course" class="text-button">Discover More</a>
                                     <%}%>
                                 </div>
                             </li>
@@ -120,7 +120,7 @@
                                     <%
                                     } else {
                                     %>
-                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=yoga_training" class="text-button">Discover More</a>
+                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=Yoga Training" class="text-button">Discover More</a>
                                     <%}%>
                                 </div>
                             </li>
@@ -138,7 +138,7 @@
                                     <%
                                     } else {
                                     %>
-                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=body_building_course" class="text-button">Discover More</a>
+                                    <a href="<%= request.getContextPath()%>/RegisterEvent?event=Body Building Course" class="text-button">Discover More</a>
                                     <%}%>
                                 </div>
                             </li>
