@@ -18,7 +18,7 @@
             <ul class="navlinks">
                 <li><a href="#" class="navlink">About us</a></li>
                 <li><a href="<%= request.getContextPath() %>/Login" class="navlink">Book now</a></li>
-                <li><a href="<%= request.getContextPath() %>/registerEvent" class="navlink">Event</a></li>
+                <li><a href="<%= request.getContextPath() %>/ViewEvent" class="navlink">Event</a></li>
                 <%
                     Customer customer1 = (Customer) session.getAttribute("customer");
                     User user = (User) session.getAttribute("user");
