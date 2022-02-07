@@ -56,7 +56,9 @@
             <%
             } else {
             %>
+
             <a href="<%= request.getContextPath()%>/MakeBooking?activity=pingpong" class="pricing__button">Book this session</a>
+
             <%}%>
         </article>
 
@@ -105,7 +107,9 @@
             <%
             } else {
             %>
+
             <a href="<%= request.getContextPath()%>/MakeBooking?activity=basketball" class="pricing__button">Book this session</a>
+
             <%}%>
         </article>
 

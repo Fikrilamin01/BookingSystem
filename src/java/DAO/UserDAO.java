@@ -19,4 +19,5 @@ public interface UserDAO<T> {
     public void insert(T t);
     public void delete(String username);
     public void update(String username, T t);   
+    public void adminUpdate(String username, T t);   
 }

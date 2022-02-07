@@ -5,8 +5,9 @@
  */
 package DAO;
 
-import DBUtility.DBConnection;
+
 import Model.Hall;
+import Utility.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/MakeBooking.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/Register2.java</file>
+            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/Admin.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/Register.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/manageBooking.jsp</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/BookingPagePingPong.jsp</file>
@@ -13,7 +14,6 @@
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/Profile.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/head.jsp</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/HallDAOImpl.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DBUtility/DBConnection.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/BookingPageBasketball.jsp</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/register.jsp</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/registerEvent.java</file>
@@ -24,13 +24,16 @@
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/DAO.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/pricing.jsp</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/PaymentDAOImpl.java</file>
+            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Utility/JavaMailUtil.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/adminNav.jsp</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/UserDAO.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Model/Customer.java</file>
+            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/index.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Model/Booking.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/UserDAOImpl.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/BookingPageGymnasium.jsp</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/admin.jsp</file>
+            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/Login.java</file>
             <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Model/Payment.java</file>
         </group>
     </open-files>
