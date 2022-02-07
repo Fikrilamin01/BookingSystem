@@ -75,6 +75,7 @@ public class EventDAOImpl implements DAO<Event> {
     public void insert(Event event) {
         try {
             String SQL = "INSERT INTO EVENT "
+                    
                     + "(id,eventName,eventDate,eventPrice,customerId) "
                     + "VALUES "
                     + "(?, ?, ?, ?, ?)";

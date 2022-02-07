@@ -21,14 +21,21 @@ public class Event implements Serializable{
     public Event() {
     }
 
-    public Event(int Id, String eventName, String eventDate, double eventPrice, String customerId) {
-        this.Id = Id;
+//    public Event(int Id, String eventName, String eventDate, double eventPrice, String customerId) {
+//        this.Id = Id;
+//        this.eventName = eventName;
+//        this.eventDate = eventDate;
+//        this.eventPrice = eventPrice;
+//        this.customerId = customerId;
+//    }
+
+    public Event(String eventName, String eventDate, double eventPrice, String customerId) {
         this.eventName = eventName;
         this.eventDate = eventDate;
         this.eventPrice = eventPrice;
         this.customerId = customerId;
     }
-
+    
     public int getId() {
         return Id;
     }
