@@ -5,8 +5,10 @@
  */
 package Controller;
 
+import DAO.CustomerDAOImpl;
 import DAO.UserDAO;
 import DAO.UserDAOImpl;
+import Model.Customer;
 import Model.User;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -31,6 +33,11 @@ public class ViewUser extends HttpServlet {
         UserDAO dao = new UserDAOImpl();
         User u = (User) dao.get(username);
         request.setAttribute("u", u);
+        
+        UserDAO dao2 = new CustomerDAOImpl();
+        Customer c = (Customer) dao2.get(username);
+        request.setAttribute("c", c);
+        
         request.getRequestDispatcher("/View/manageUser.jsp").forward(request, response);
     }
 
