@@ -53,6 +53,7 @@ public class RegisterEvent extends HttpServlet {
             default:
                 break;
         }
+
         request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
     }
 
@@ -72,14 +73,12 @@ public class RegisterEvent extends HttpServlet {
         if (eventDate != null) {
             Event event = new Event(eventName, eventDate, 15.00, username);
             EventDAO.insert(event);
-            request.setAttribute("registerEvent", "Register Successfull");
-            request.getRequestDispatcher("View/index.jsp").forward(request, response);
+            request.setAttribute("registerSuccess", "Register Successfull");
+            session.setAttribute("eventName", eventName);
+            session.setAttribute("eventDate", eventDate);
+            session.setAttribute("eventPrice", eventPrice);
+            request.setAttribute("event", eventName);
+            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
         }
-//        else {
-//            request.setAttribute("registerEvent", "Register error");
-//            request.getRequestDispatcher("View/registerEvent.jsp").forward(request, response);
-//        }
-
     }
-
 }

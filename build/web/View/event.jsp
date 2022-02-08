@@ -148,7 +148,7 @@
             </div>
         </section>
         <!-- ***** Features Item End ***** -->
-        <%@include file = "footer.html"%>
+        <%--<%@include file = "footer.html"%>--%>
 
     </body>
 </html>
