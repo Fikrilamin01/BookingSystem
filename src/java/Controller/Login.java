@@ -73,6 +73,8 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
         UserDAO userDAO = new UserDAOImpl();
         User user = (User) userDAO.get(username);
+        
+        
         //login authentication
         if (user != null) {
             if (password.equals(user.getPassword())) {
@@ -100,7 +102,7 @@ public class Login extends HttpServlet {
                 return;
             }
         }
-
+        
         //redirect to login page
         //add error message
         request.setAttribute("errorLogin", "Failed to authenticated."
