@@ -16,8 +16,11 @@
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
-                <li><a href="<%= request.getContextPath() %>/ViewAllUser" class="navlink">Manage Users</a></li>
-                <li><a href="<%= request.getContextPath() %>/ViewBookingHall" class="navlink">Manage Booking Hall</a></li>
+                <li><a href="<%= request.getContextPath() %>/ViewAllUser" class="navlink">Users</a></li>
+                <li><a href="<%= request.getContextPath() %>/ViewHall" class="navlink">Halls</a></li>
+                <li><a href="<%= request.getContextPath() %>/ViewBookingHall" class="navlink">Bookings</a></li>
+                <li><a href="<%= request.getContextPath() %>/ViewEvent2" class="navlink">Events</a></li>
+                <li><a href="<%= request.getContextPath() %>/ViewPayment" class="navlink">Payments</a></li>
                 <%
                     Customer customer1 = (Customer) session.getAttribute("customer");
                     User user = (User) session.getAttribute("user");

@@ -9,6 +9,7 @@
 <html>
     <head>
         <%@include file = "head.jsp"%>
+        <title>Admin Page</title>
     </head>
     <body>
         <%@include file = "adminNav.jsp"%>
@@ -21,8 +22,11 @@
                 </h3>         
             </div>
             <div>
-                <a href="<%= request.getContextPath() %>/ViewAllUser" class="indexBtn">Manage User Profile</a>
-                <a href="<%= request.getContextPath() %>/ViewBookingHall" class="indexBtn">Manage Booking Hall</a>
+                <a style="width: 50%; text-align: center;" href="<%= request.getContextPath() %>/ViewAllUser" class="indexBtn">Manage User Profile</a><br>
+                <a style="width: 50%; text-align: center;" href="<%= request.getContextPath() %>/ViewHall" class="indexBtn">View Hall</a><br>
+                <a style="width: 50%; text-align: center;" href="<%= request.getContextPath() %>/ViewBookingHall" class="indexBtn">View Booking</a><br>
+                <a style="width: 50%; text-align: center;" href="<%= request.getContextPath() %>/ViewBookingHall" class="indexBtn">View Event</a><br>
+                <a style="width: 50%; text-align: center;" href="<%= request.getContextPath() %>/ViewBookingHall" class="indexBtn">View Payment</a><br>
             </div>
         </div>
         </div>  

@@ -82,6 +82,7 @@
                                         <td><select class="role" name="role">
                                                 <option value="User" selected>User</option>
                                                 <option value="Customer">Customer</option>
+                                                <!--<option value="Admin">Admin</option>-->
                                             </select>
                                         </td>
                                         <%
@@ -90,6 +91,7 @@
                                         <td><select class="role" name="role">
                                                 <option value="Customer" selected>Customer</option>
                                                 <option value="User">User</option>                                  
+                                                <!--<option value="Admin">Admin</option>-->                                  
                                             </select>
                                         </td>
                                         <%  }%>

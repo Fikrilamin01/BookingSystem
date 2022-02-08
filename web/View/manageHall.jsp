@@ -1,17 +1,17 @@
 <%-- 
-    Document   : manageBooking
-    Created on : Jan 22, 2022, 2:55:46 PM
+    Document   : manageHall
+    Created on : Feb 9, 2022, 3:57:45 AM
     Author     : Legion
 --%>
 
+<%@page import="Model.Hall"%>
 <%@page import="java.util.List"%>
-<%@page import="Model.Booking"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>View Bookings</title>
+        <title>View Sports Hall</title>
         <!--Fonts-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
     <body>
         <%@include file = "adminNav.jsp"%>       
         <div class="container">
-            <div class="manageBookingTitle"><br><br>View Booking Hall</div>
+            <div class="manageBookingTitle"><br><br>View Sports Halls</div>
             <div class="row justify-content">
                 <div class="col-md-12">
                     <div class=" mt-5">  
@@ -54,37 +54,34 @@
                           <table class="table table-hover">
                               <thead class="table-condensed">
                                 <tr>
-                                  <td style="padding:20px 20px 20px 10px;">ID</td>
-                                  <td style="padding:20px 20px 20px 10px;">Date</td>
-                                  <td style="padding:20px 20px 20px 10px;">Status</td>
-                                  <td style="padding:20px 20px 20px 10px;">Amount to Pay</td>
-                                  <td style="padding:20px 20px 20px 10px;">Customer ID</td>
+                                  <td style="padding:20px 20px 20px 10px;">Game</td>
                                   <td style="padding:20px 20px 20px 10px;">Hall Number</td>
                                   <td style="padding:20px 20px 20px 10px;">Session</td>
-                                  <td style="padding:20px 20px 20px 10px;">Game</td>
-                                  <td style="padding:20px 20px 20px 10px;">Update</td>
+                                  <td style="padding:20px 20px 20px 10px;">Date</td>
+                                  <td style="padding:20px 20px 20px 10px;">Vacancy</td>
                                 </tr>
                               </thead>
+                              
                               <%
-                                List<Booking> ul = (List<Booking>)request.getAttribute("ul");
+                                String status="";
+                                List<Hall> ul = (List<Hall>)request.getAttribute("ul");
                                     for(int i=0;i<ul.size();i++){
-                                   %>
+                                       %>
                                    <tbody>
                                     <tr>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getId()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getDate()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getStatus()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getAmountToPay()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getCustomerId()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getHallNo()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getSession()%></td>
                                         <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getGame()%></td>
-                                        <td style="padding:10px;">
-                                            <form method="get" action="ViewUser">
-                                                <input type="hidden" name="Id" value="<%=ul.get(i).getId()%>">
-                                                <button type="submit" class="btn btn-primary">Update</button>
-                                            </form>
-                                        </td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getHallNo()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getTime()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getDate()%></td>
+                                        <%
+                                            if(ul.get(i).isVacancy() == true){
+                                               status  = "unoccupied";
+                                            }
+                                            else{
+                                               status  = "occupied"; 
+                                            }
+                                        %>
+                                        <td style="padding:20px 20px 20px 10px;"><%=status%></td> 
                                    <% } %>
                                     </tr>
                                 </tbody>                
@@ -98,3 +95,4 @@
     <%@include file = "footer.html"%>                                
     </body>
 </html>
+
