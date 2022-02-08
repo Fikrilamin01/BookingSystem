@@ -7,15 +7,16 @@ package DAO;
 
 import java.util.List;
 
+
 /**
  *
- * @author fikri
+ * @author pc
  */
-public interface DAO<T> {
-    //define all the methods available to access the data
+public interface HallDAO<T> {
     public List<T> getAll();
     public T get(int id);
     public void insert(T t);
     public void delete(int id);
     public void update(int id, T t);
+     public T gethall(int a,String g,String t);
 }

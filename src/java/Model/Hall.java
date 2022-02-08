@@ -6,8 +6,7 @@
 package Model;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
+
 
 
 /**
@@ -20,27 +19,34 @@ public class Hall implements Serializable {
     private String time;
     private String date;
     private boolean vacancy;
-    private String customerId;
 
-    public Hall(String Game, int HallNo, String time, String date, boolean vacancy, String customerId) {
+
+    public Hall(String Game, int HallNo, String time, String date, boolean vacancy) {
         this.Game = Game;
         this.HallNo = HallNo;
         this.time = time;
         this.date = date;
         this.vacancy = vacancy;
-        this.customerId = customerId;
-    }
-
-    public Hall() {
         
     }
 
-    public String getCustomerId() {
-        return customerId;
+    public Hall(String Game, String time, String date, boolean vacancy) {
+        this.Game = Game;
+        this.time = time;
+        this.date = date;
+        this.vacancy = vacancy;
+        
     }
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
+    public Hall(String date, boolean vacancy,String game) {
+        this.date = date;
+        this.vacancy = vacancy;
+        this.Game= game;
+    }
+    
+
+    public Hall() {
+        
     }
 
 

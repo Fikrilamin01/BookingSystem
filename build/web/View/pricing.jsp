@@ -57,7 +57,7 @@
             } else {
             %>
 
-            <a href="<%= request.getContextPath()%>/MakeBooking?activity=pingpong" class="pricing__button">Book this session</a>
+            <a href="<%= request.getContextPath()%>/MakeBooking?activity=ping-pong" class="pricing__button">Book this session</a>
 
             <%}%>
         </article>
