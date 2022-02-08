@@ -163,7 +163,26 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div>                         
+                <div class="col-xl-8 order-xl-3 mt-5 ">
+                    <div class="card card-transaction shadow">
+                        <div class="card-header bg-white border-0">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">View Transaction History</h3>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 order-lg-2">
+                                <form method="get" action="View/myTransaction.jsp">
+                                    <input type="hidden" name="customerId" value="<%=customer.getUserName()%>">
+                                    <button class="login__button" >My Transaction History</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>                            
             </div>
         </div>
         <%@include file = "footer.html"%>
