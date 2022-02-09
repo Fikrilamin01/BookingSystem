@@ -4,6 +4,7 @@
     Author     : M S I
 --%>
 
+<%@page import="java.time.LocalDate"%>
 <%@page import="Model.Event"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,10 +22,13 @@
                             <div class="text-left logo p-2 px-5 pt-5"> <img src="<%= request.getContextPath()%>/images/LOGO-UTM.png" height="80" > </div>
                             <div class="invoice p-5">
                                 <%
+
+                                    String game = (String) session.getAttribute("game");
+                                    int hall = (Integer) session.getAttribute("hallNo");
+                                    String time = (String) session.getAttribute("time");
+                                    double pay = (Double) session.getAttribute("pay");
                                     Customer customer = (Customer) session.getAttribute("customer");
-                                    String eventName = (String) session.getAttribute("eventName");
-                                    String eventDate = (String) session.getAttribute("eventDate");
-                                    double eventPrice = (Double) session.getAttribute("eventPrice");
+                                    LocalDate df = LocalDate.now();
                                 %>
                                 <h5>Your booking Confirmed!</h5> <span class="font-weight-bold d-block mt-4">Hello, <%=customer.getName()%></span> <span>You booking has been confirmed and we are looking forward meeting you!</span>
                                 <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
@@ -49,27 +53,18 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <div class="py-2"> <span class="d-block text-muted">Booking Date</span> <span><%= eventDate%></span> </div>
+                                                    <div class="py-2"> <span class="d-block text-muted">Game</span><span><%=game%></span> </div>
                                                 </td>
                                                 <td>
-                                                    <div class="py-2"> <span class="d-block text-muted">Payment</span> <span><img src="https://img.icons8.com/color/48/000000/mastercard.png" width="20" /></span> </div>
+                                                    <div class="py-2"> <span class="d-block text-muted">Hall Number</span><span><%=hall%></span> </div>
+                                                </td>
+                                                <td>
+                                                    <div class="py-2"> <span class="d-block text-muted">Session</span><span><%=time%></span> </div>
+                                                </td>
+                                                <td>
+                                                    <div class="py-2"> <span class="d-block text-muted">Date</span><span><%=df%></span> </div>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="product border-bottom table-responsive">
-                                    <table class="table table-borderless">
-                                        <tbody>
-                                            <tr>
-                                                <td width="60%"> <span class="font-weight-bold"></span>
-                                                    <div class="product-qty"> <span class="d-block">Booking : </span> <span><%= eventName%></span> </div>
-                                                </td>
-                                                <td width="20%">
-                                                    <div class="text-right"> <span class="font-weight-bold">RM<%=eventPrice%></span> </div>
-                                                </td>
-                                            </tr>
-
                                         </tbody>
                                     </table>
                                 </div>
@@ -82,7 +77,7 @@
                                                         <div class="text-left"> <span class="font-weight-bold">Subtotal</span> </div>
                                                     </td>
                                                     <td>
-                                                        <div class="text-right"> <span class="font-weight-bold">RM<%=eventPrice%></span> </div>
+                                                        <div class="text-right"> <span class="font-weight-bold">RM<%=pay%></span> </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
