@@ -6,6 +6,7 @@
 
 <%@page import="java.util.List"%>
 <%@page import="Model.User"%>
+<%@page import="Model.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,6 +25,7 @@
         <div class="main-block col-md-8">
             <%            
                 User u = (User) request.getAttribute("u");
+                Customer c = (Customer) request.getAttribute("c");
             %>
             <div class="card">
                 <h2>Edit <%=u.getName()%>'s Details Here</h2>
@@ -46,6 +48,31 @@
                                         <td>Email</td>
                                         <td>:</td>
                                         <td><input class="text" type="text" name="email" value="<%=u.getEmail()%>"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Age</td>
+                                        <td>:</td>
+                                        <td><%=c.getAge()%></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address</td>
+                                        <td>:</td>
+                                        <td><%=c.getAddress()%></td>
+                                    </tr>
+                                    <tr>
+                                        <td>City</td>
+                                        <td>:</td>
+                                        <td><%=c.getCity()%></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Country</td>
+                                        <td>:</td>
+                                        <td><%=c.getCountry()%></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Postal</td>
+                                        <td>:</td>
+                                        <td><%=c.getPostal()%></td>
                                     </tr>
                                     <tr>
                                         <td>Role</td>

@@ -17,30 +17,50 @@ public class Booking implements Serializable {
     private String date;
     private double amountToPay;
     private String customerId;
-    private int paymentRef;
+    private int hallNo;
+    private String session;
+    private String game;
 
     public Booking() {
     }
 
-    public Booking(int Id, String status, String date, double amountToPay, String customerId, int paymentRef) {
+    public Booking(int Id, String status, String date, double amountToPay, String customerId, int hallNo, String session, String game) {
         this.Id = Id;
         this.status = status;
         this.date = date;
         this.amountToPay = amountToPay;
         this.customerId = customerId;
-        this.paymentRef = paymentRef;
+        this.hallNo = hallNo;
+        this.session = session;
+        this.game = game;
     }
 
-
-    public int getPaymentRef() {
-        return paymentRef;
+    public String getSession() {
+        return session;
     }
 
-    public void setPaymentRef(int paymentRef) {
-        this.paymentRef = paymentRef;
+    public void setSession(String session) {
+        this.session = session;
+    }
+
+    public String getGame() {
+        return game;
+    }
+
+    public void setGame(String game) {
+        this.game = game;
     }
 
    
+
+    public int getHallNo() {
+        return hallNo;
+    }
+
+    public void setHallNo(int hallNo) {
+        this.hallNo = hallNo;
+    }
+    
     public int getId() {
         return Id;
     }

@@ -68,7 +68,7 @@
                             <div class="alert alert-success">
                                 <strong><%=request.getAttribute("registerSuccess")%></strong>
                             </div>
-                            <a href="<%=request.getContextPath()%>/Receipt" style="text-decoration: none;" class="login__button" role="button">View Receipt</a>
+                            <a href="<%=request.getContextPath()%>/ReceiptHall" style="text-decoration: none;" class="login__button" role="button">View Receipt</a>
                             <%
                             } else {
                             %>
@@ -84,7 +84,7 @@
         </div>
     </div>
     <%--<%@include file = "footer.html"%>--%>
-    <!--        <script>
+            <script>
                 $(window).scroll(function () {
                     if ($(document).scrollTop() < 20) {
                         $('.logolink').addClass('logo-white');
@@ -98,6 +98,6 @@
                         $('.navlink').removeClass('nav-white');
                     }
                 });
-            </script>-->
+            </script>
 </body>
 </html>

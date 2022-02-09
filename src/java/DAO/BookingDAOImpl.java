@@ -39,7 +39,9 @@ public class BookingDAOImpl implements DAO<Booking> {
                 u.setDate(rs.getString("date"));
                 u.setAmountToPay(rs.getDouble("amountToPay"));
                 u.setCustomerId(rs.getString("customerId"));
-                u.setPaymentRef(rs.getInt("paymentRef"));
+                u.setHallNo(rs.getInt("hallNo"));
+                u.setGame(rs.getString("game"));
+                u.setSession(rs.getString("session"));
                 ul.add(u);
             }
             DBConnection.closeConnection();
@@ -64,7 +66,9 @@ public class BookingDAOImpl implements DAO<Booking> {
             u.setDate(rs.getString("date"));
             u.setAmountToPay(rs.getDouble("amountToPay"));
             u.setCustomerId(rs.getString("customerId"));
-            u.setPaymentRef(rs.getInt("paymentRef"));
+            u.setHallNo(rs.getInt("hallNo"));
+            u.setGame(rs.getString("game"));
+            u.setSession(rs.getString("session"));
             DBConnection.closeConnection();
         } catch (Exception ex) {
         }
@@ -75,9 +79,9 @@ public class BookingDAOImpl implements DAO<Booking> {
     public void insert(Booking booking) {
         try {
             String SQL = "INSERT INTO BOOKING "
-                    + "(id,status,date,amountToPay,customerId,paymentRef) "
+                    + "(id,status,date,amountToPay,customerId,hallNo,game,session) "
                     + "VALUES "
-                    + "(?, ?, ?, ?, ?, ?)";
+                    + "(?, ?, ?, ?, ?, ?, ?, ?)";
             conn = DBConnection.openConnection();
 //          prepare statement
             ps = conn.prepareStatement(SQL);
@@ -86,7 +90,9 @@ public class BookingDAOImpl implements DAO<Booking> {
             ps.setString(3, booking.getDate());
             ps.setDouble(4, booking.getAmountToPay());
             ps.setString(5, booking.getCustomerId());
-            ps.setInt(6, booking.getPaymentRef());
+            ps.setInt(6, booking.getHallNo());
+            ps.setString(7, booking.getGame());
+            ps.setString(8, booking.getSession());
             ps.executeUpdate();
             DBConnection.closeConnection();
         } catch (Exception ex) {
@@ -116,7 +122,9 @@ public class BookingDAOImpl implements DAO<Booking> {
                     + "date = ?, "
                     + "amountToPay = ?, "
                     + "customerId = ?, "
-                    + "paymentRef = ? "
+                    + "hallNo = ?, "
+                    + "game = ?, "
+                    + "session= ?"
                     + "WHERE id = ?";
             conn = DBConnection.openConnection();
 
@@ -126,8 +134,11 @@ public class BookingDAOImpl implements DAO<Booking> {
             ps.setString(2, booking.getDate());
             ps.setDouble(3, booking.getAmountToPay());
             ps.setString(4, booking.getCustomerId());
-            ps.setInt(5, booking.getPaymentRef());
-            ps.setInt(6, id);
+            ps.setInt(5, booking.getHallNo());
+            ps.setString(6, booking.getGame());
+            ps.setString(7, booking.getSession());
+            ps.setInt(8, id);
+            
             ps.executeUpdate();
             DBConnection.closeConnection();
 
