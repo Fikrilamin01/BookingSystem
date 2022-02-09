@@ -64,9 +64,13 @@ public class SubmitBooking extends HttpServlet {
         Booking b = new Booking(bookId,status,date.toString(),pay,customer.getUserName(),h,t,g);
         book.insert(b);
         hall.update(h, a);
+<<<<<<< HEAD
         
         session.setAttribute("pay", pay);
         request.getRequestDispatcher("View/receiptHall.jsp").forward(request, response);
+=======
+        request.getRequestDispatcher("View/index.jsp").forward(request, response);
+>>>>>>> e4acd4506f632dff7bdb591292e35db9554427c9
         
         
         
