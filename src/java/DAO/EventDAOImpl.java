@@ -132,4 +132,9 @@ public class EventDAOImpl implements DAO<Event> {
         }
     }
 
+    @Override
+    public Event get1(String cId) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

@@ -145,4 +145,9 @@ public class BookingDAOImpl implements DAO<Booking> {
         } catch (Exception ex) {
         }
     }
+
+    @Override
+    public Booking get1(String cId) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

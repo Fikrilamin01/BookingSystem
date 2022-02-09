@@ -3,21 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/MakeBooking.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/DAO.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/profile.jsp</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/pricing.jsp</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/BookingConfirmation.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/SubmitBooking.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/PaymentDAOImpl.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/BookingPageConfirmation.jsp</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/HallDAOImpl.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/BookingDAOImpl.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/web/View/BookingPage.jsp</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/HallDAO.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Model/Booking.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/DAO/EventDAOImpl.java</file>
-            <file>file:/C:/Users/pc/Documents/NetBeansProjects/BookingSystem/src/java/Controller/Login.java</file>
+            <file>file:/C:/Users/Legion/OneDrive/Documents/GitHub/BookingSystem/web/View/manageEvent.jsp</file>
+            <file>file:/C:/Users/Legion/OneDrive/Documents/GitHub/BookingSystem/web/View/manageHall.jsp</file>
+            <file>file:/C:/Users/Legion/OneDrive/Documents/GitHub/BookingSystem/web/View/manageAllUser.jsp</file>
+            <file>file:/C:/Users/Legion/OneDrive/Documents/GitHub/BookingSystem/web/View/managePayment.jsp</file>
+            <file>file:/C:/Users/Legion/OneDrive/Documents/GitHub/BookingSystem/web/View/manageBooking.jsp</file>
+            <file>file:/C:/Users/Legion/OneDrive/Documents/GitHub/BookingSystem/web/View/admin.jsp</file>
+            <file>file:/C:/Users/Legion/OneDrive/Documents/GitHub/BookingSystem/web/View/manageUser.jsp</file>
         </group>
     </open-files>
 </project-private>
