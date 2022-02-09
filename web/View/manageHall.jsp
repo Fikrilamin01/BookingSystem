@@ -43,7 +43,11 @@
         
     </head>
     <body>
-        <%@include file = "adminNav.jsp"%>       
+        <%@include file = "adminNav.jsp"%>
+        <%
+                                String status="";
+                                List<Hall> ul = (List<Hall>)request.getAttribute("ul");
+                                %>
         <div class="container">
             <div class="manageBookingTitle"><br><br>View Sports Halls</div>
             <div class="row justify-content">
@@ -51,6 +55,42 @@
                     <div class=" mt-5">  
                         <div style="padding-bottom: 30px;" class="container-fluid page-body-wrapper"> 
                           <div class="container">
+                              <h2>Basketball</h2>
+                          <table class="table table-hover">
+                              <thead class="table-condensed">
+                                <tr>
+                                  <td style="padding:20px 20px 20px 10px;">Game</td>
+                                  <td style="padding:20px 20px 20px 10px;">Hall Number</td>
+                                  <td style="padding:20px 20px 20px 10px;">Session</td>
+                                  <td style="padding:20px 20px 20px 10px;">Date</td>
+                                  <td style="padding:20px 20px 20px 10px;">Vacancy</td>
+                                </tr>
+                              </thead>
+                              
+                              <%for(int i=0;i<ul.size();i++){
+                                        if(ul.get(i).getGame().equals("basketball")){
+                                       %>
+                                   <tbody>
+                                    <tr>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getGame()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getHallNo()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getTime()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getDate()%></td>
+                                        <%
+                                            if(ul.get(i).isVacancy() == true){
+                                               status  = "Available";
+                                            }
+                                            else{
+                                               status  = "Booked"; 
+                                            }
+                                        %>
+                                        <td style="padding:20px 20px 20px 10px;"><%=status%></td> 
+                                   <% }} %>
+                                    </tr>
+                                </tbody>                
+                          </table>
+                          <br>
+                          <h2>Ping-Pong</h2>
                           <table class="table table-hover">
                               <thead class="table-condensed">
                                 <tr>
@@ -63,9 +103,8 @@
                               </thead>
                               
                               <%
-                                String status="";
-                                List<Hall> ul = (List<Hall>)request.getAttribute("ul");
                                     for(int i=0;i<ul.size();i++){
+                                        if(ul.get(i).getGame().equals("ping-pong")){
                                        %>
                                    <tbody>
                                     <tr>
@@ -75,14 +114,50 @@
                                         <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getDate()%></td>
                                         <%
                                             if(ul.get(i).isVacancy() == true){
-                                               status  = "unoccupied";
+                                               status  = "Available";
                                             }
                                             else{
-                                               status  = "occupied"; 
+                                               status  = "Booked"; 
                                             }
                                         %>
                                         <td style="padding:20px 20px 20px 10px;"><%=status%></td> 
-                                   <% } %>
+                                   <% }} %>
+                                    </tr>
+                                </tbody>                
+                          </table>
+                          <br>          
+                          <h2>Gymnasium</h2>
+                          <table class="table table-hover">
+                              <thead class="table-condensed">
+                                <tr>
+                                  <td style="padding:20px 20px 20px 10px;">Game</td>
+                                  <td style="padding:20px 20px 20px 10px;">Hall Number</td>
+                                  <td style="padding:20px 20px 20px 10px;">Session</td>
+                                  <td style="padding:20px 20px 20px 10px;">Date</td>
+                                  <td style="padding:20px 20px 20px 10px;">Vacancy</td>
+                                </tr>
+                              </thead>
+                              
+                              <%
+                                    for(int i=0;i<ul.size();i++){
+                                        if(ul.get(i).getGame().equals("gymnasium")){
+                                       %>
+                                   <tbody>
+                                    <tr>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getGame()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getHallNo()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getTime()%></td>
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getDate()%></td>
+                                        <%
+                                            if(ul.get(i).isVacancy() == true){
+                                               status  = "Available";
+                                            }
+                                            else{
+                                               status  = "Booked"; 
+                                            }
+                                        %>
+                                        <td style="padding:20px 20px 20px 10px;"><%=status%></td> 
+                                   <% }} %>
                                     </tr>
                                 </tbody>                
                           </table>

@@ -54,9 +54,9 @@
                           <table class="table table-hover">
                               <thead class="table-condensed">
                                 <tr>
-                                  <td style="padding:20px 20px 20px 10px;">Invoice ID</td>
-                                  <td style="padding:20px 20px 20px 10px;">Date</td>
-                                  <td style="padding:20px 20px 20px 10px;">Customer ID</td>
+                                  <td style="padding:20px 10px 20px 10px;">Invoice ID</td>
+                                  <td style="padding:20px 10px 20px 10px;">Customer ID</td>
+                                  <td style="padding:20px 10px 20px 10px;">Date</td>                              
                                 </tr>
                               </thead>
                               
@@ -66,9 +66,9 @@
                                        %>
                                    <tbody>
                                     <tr>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getInvoiceId()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getDate()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getCustomerId()%></td> 
+                                        <td style="padding:20px 10px 20px 10px;"><%=ul.get(i).getInvoiceId()%></td>
+                                        <td style="padding:20px 10px 20px 10px;"><%=ul.get(i).getCustomerId()%></td> 
+                                        <td style="padding:20px 10px 20px 10px;"><%=ul.get(i).getDate()%></td>
                                    <% } %>
                                     </tr>
                                 </tbody>                

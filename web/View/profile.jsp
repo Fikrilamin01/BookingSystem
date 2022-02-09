@@ -175,7 +175,7 @@
                         </div>   
                         <div class="row justify-content-center">
                             <div class="col-lg-7 order-lg-2">
-                                <form method="get" action="View/myTransaction.jsp">
+                                <form method="get" action="ViewMyTransaction">
                                     <input type="hidden" name="customerId" value="<%=customer.getUserName()%>">
                                     <button class="login__button" >My Transaction History</button>
                                 </form>

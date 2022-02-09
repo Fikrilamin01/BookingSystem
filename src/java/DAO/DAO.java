@@ -15,6 +15,7 @@ public interface DAO<T> {
     //define all the methods available to access the data
     public List<T> getAll();
     public T get(int id);
+    public T get1(String cId);
     public void insert(T t);
     public void delete(int id);
     public void update(int id, T t);

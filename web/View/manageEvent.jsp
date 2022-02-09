@@ -59,6 +59,7 @@
                                   <td style="padding:20px 20px 20px 10px;">Date</td>
                                   <td style="padding:20px 20px 20px 10px;">Price</td>
                                   <td style="padding:20px 20px 20px 10px;">Customer ID</td>
+                                  <td style="padding:20px 20px 20px 10px;"></td>
                                 </tr>
                               </thead>
                               
@@ -72,7 +73,13 @@
                                         <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getEventName()%></td>
                                         <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getEventDate()%></td>
                                         <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getEventPrice()%></td>
-                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getCustomerId()%></td> 
+                                        <td style="padding:20px 20px 20px 10px;"><%=ul.get(i).getCustomerId()%></td>
+                                        <td style="padding:10px;">
+                                            <form method="get" action="DeleteEvent">
+                                                <input type="hidden" name="id" value="<%=ul.get(i).getId()%>">
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                        </td>
                                    <% } %>
                                     </tr>
                                 </tbody>                

@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import DAO.DAO;
+import DAO.PaymentDAOImpl;
 import Model.Payment;
 import Utility.DBConnection;
 import java.io.IOException;
@@ -32,7 +34,14 @@ public class ViewMyTransaction extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        String customerId = request.getParameter("customerId");
+        
+        DAO dao = new PaymentDAOImpl();
+        Payment u = (Payment) dao.get1(customerId);
+        request.setAttribute("u", u);
 
+        request.getRequestDispatcher("View/myTransaction.jsp").forward(request, response);
     }
 
 }

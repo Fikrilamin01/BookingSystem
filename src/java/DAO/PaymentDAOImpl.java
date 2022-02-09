@@ -120,4 +120,24 @@ public class PaymentDAOImpl implements DAO<Payment> {
         }
     }
 
+    @Override
+    public Payment get1(String cId) {
+        Payment payment = new Payment();
+        try {
+            String SQL = "SELECT * FROM PAYMENT WHERE customerId = ?";
+            conn = DBConnection.openConnection();
+//            prepare statement
+            ps = conn.prepareStatement(SQL);
+            ps.setString(1, cId);
+            rs = ps.executeQuery();
+            rs.next();
+            payment.setInvoiceId(rs.getInt("invoiceId"));
+            payment.setDate(rs.getString("date"));
+            payment.setCustomerId(rs.getString("customerId"));
+            DBConnection.closeConnection();
+        } catch (Exception ex) {
+        }
+        return payment;
+    }
+
 }

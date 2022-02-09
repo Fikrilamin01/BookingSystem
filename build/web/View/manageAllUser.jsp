@@ -23,6 +23,10 @@
                 font-weight: 600;
             } 
             
+            table{
+                text-align: center;
+            }
+            
             thead{
                 font-size: 20px;
                 font-weight: 600;
@@ -55,8 +59,8 @@
                                   <td style="padding:20px 20px 20px 10px;">Name</td>
                                   <td style="padding:20px 20px 20px 10px;">Email</td>
                                   <td style="padding:20px 20px 20px 10px;">Role</td>
-                                  <td style="padding:20px 20px 20px 10px;">Update</td>
-                                  <td style="padding:20px 20px 20px 10px;">Delete</td>
+                                  <td style="padding:20px 20px 20px 10px;"></td>
+                                  <td style="padding:20px 20px 20px 10px;"></td>
                                 </tr>
                               </thead>
                               <%
